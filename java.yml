@@ -1,0 +1,9 @@
+---
+- hosts: 10.154.0.3 
+  tasks:
+  - name: Download Java
+    yum:
+        name: java
+        state: latest
+    become: true
+...
