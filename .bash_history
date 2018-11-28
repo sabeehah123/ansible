@@ -332,3 +332,61 @@ mkdir projects
 ll
 cd projects
 ll
+cd python-server/
+ll
+vim git.yml 
+ansible-playbook git.yml 
+vim git.yml 
+ansible-playbook git.yml 
+vim git.yml 
+ansible-playbook git.yml 
+ssh 10.154.0.17
+vim git.yml 
+ansible-playbook git.yml 
+vim git.yml 
+ansible-playbook git.yml 
+vim git.yml
+vim run_server.yml
+ansible-playbook run_server.yml 
+vim run_server.yml
+ansible-playbook run_server.yml 
+vim run_server.yml
+ansible-playbook run_server.yml 
+vim run_server.yml
+ansible-playbook run_server.yml 
+ssh 10.154.0.17
+vim git.yml
+vim run_server.yml
+ansible-playbook git.yml 
+ansible-playbook run_server..yml 
+ansible-playbook run_server.yml 
+vim run_server.yml
+ansible-playbook run_server.yml 
+ll
+rm git.retry
+rm run_server.retry
+ll
+cd ..
+ll
+cd projects
+ll
+cd ..
+ll
+rmdir projects
+ll
+git add *
+git status
+git commit -m "files added"
+git push -u origin master
+git pull 
+git push-u origin master 
+git push -u origin master 
+git status
+git add -all
+git add --all
+git status
+git commit -m "files added"
+git push -u origin master
+git pull 
+git push -u origin
+git push -u origin master
