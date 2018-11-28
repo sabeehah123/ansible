@@ -1,0 +1,60 @@
+---
+- hosts: 10.154.0.11
+  gather_facts: flase
+  become: true  
+  tasks:
+  - name: Download Java
+    yum:
+        name: java
+        state: present
+
+  - name: Installing wget
+    yum:
+        name: wget
+        state: present
+
+  - name: Install unzip 
+    yum:
+        name: unzip
+        state: present
+
+  - name: Download Nexus
+    get_url:
+        url: https://sonatype-download.global.ssl.fastly.net/nexus/3/nexus-3.0.0-03-unix.tar.gz
+        dest: /home/sabeehah1996/
+
+  - name: Untar Nexus
+    unarchive:
+        src: /home/sabeehah1996/nexus-3.0.0-03-unix.tar.gz
+        dest: /home/sabeehah1996/
+        remote_src: yes
+
+  - name: stat nexus
+    stat: path=/home/sabeehah1996/nexus-3.0.0-03
+    register: nexus3_stat
+
+  - name: stat nexus
+    stat: path=/home/sabeehah1996/nexus
+    register: nexus_stat
+
+  - name: Move 
+    command: "mv /home/sabeehah1996/nexus-3.0.0-03 /home/sabeehah1996/nexus"
+    when: nexus3_stat.stat.exists && !nexus_stat.stat.exists
+
+
+
+#  - name: Renaming Nexus file
+#    command: "mv /home/sabeehah1996/nexus-3.0.0-03/ /home/sabeehah1996/nexus"
+
+#  - name: Creating Nexus User
+#    user:
+#      name: nexus
+
+#    command: "adduser nexus"
+
+
+#  - name: Start service httpd, if not started
+#    service:
+#        name: nexus
+#         state: started
+#

@@ -1,0 +1,15 @@
+---
+- hosts: all 
+  gather_facts: false
+  become: true
+  tasks: 
+  - name: Including variables
+    include_vars: 
+      file: vars.yml
+  - name: Creating a pyhton user and password 
+    user: 
+     name: python
+     password: "{{ password }}" 
+     state: present
+             
+...
