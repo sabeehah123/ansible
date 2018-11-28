@@ -235,3 +235,100 @@ ansible-playbook nexus.yml
 vim nexus.yml
 ansible-playbook nexus.yml
 vim nexus.yml
+ll
+rm nexus.retry 
+ll
+vim nexus.yml 
+mkdir python-server
+ll
+cd python-server/
+ll
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+vim vars.yml
+vim user.yml
+vim vars.yml
+vim user.yml
+ansible-playbook user.yml
+vim vars.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+ansible all -m ping 
+ansible-playbook user.yml
+vim user.yml
+ansible all -m ping 
+ansible-playbook user.yml
+
+ll
+ansible-playbook git.yml
+
+ll
+vim user.yml
+python -c 'import crypt; print crypt.crypt("This is my Password", "$1$SomeSalt$")'
+python -c 'import crypt; print crypt.crypt("password", "$1$SomeSalt$")'
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+vim vars.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+ansible-playbook user.yml
+vim user.yml
+vim vars.yml
+vim user.yml
+ansible-playbook user.yml
+ssh 10.154.0.7 
+ll
+rm user.retry 
+ll
+cd ..
+ll
+git add --all
+got status 
+git status 
+git commit -m "files added"
+git push -u origin master 
+ll
+cd python-server/
+ll
+git.yml
+vim git.yml
+cd ..
+mkdir projects
+ll
+cd projects
+ll

@@ -34,37 +34,48 @@
 
 # Registers:
 ""1	LINE	0
-	       shell: /bin/bash
+	
 "2	LINE	0
-	       state: present
+	    command: "./app.py"
 "3	LINE	0
-	       password: $1$SomeSalt$/jbIwfYCu0MxPBND2EtRH.
+	    command: "cd python-server"
 "4	LINE	0
-	       name: python 
+	  - name: Run python-server
 "5	LINE	0
-	      user: 
+	       shell: /bin/bash
 "6	LINE	0
-	  - name: Create a login user
+	       state: present
 "7	LINE	0
-	  tasks:
+	       password: $1$SomeSalt$/jbIwfYCu0MxPBND2EtRH.
 "8	LINE	0
-	  become: true    
+	       name: python 
 "9	LINE	0
-	- hosts: 10.154.0.17 
+	      user: 
 
 # File marks:
-'0  13  5  ~/python-server/user.yml
-'1  2  43  ~/python-server/vars.yml
-'2  1  6  ~/python-server/user.yml
-'3  1  5  ~/python-server/user.yml
-'4  1  14  ~/python-server/user.yml
-'5  1  7  ~/python-server/user.yml
-'6  1  14  ~/python-server/vars.yml
-'7  1  37  ~/python-server/user.yml
-'8  1  0  ~/python-server/user.yml
-'9  1  3  ~/python-server/user.yml
+'0  6  2  ~/python-server/run_server.yml
+'1  2  18  ~/python-server/run_server.yml
+'2  2  18  ~/python-server/git.yml
+'3  5  10  ~/python-server/run_server.yml
+'4  4  26  ~/python-server/run_server.yml
+'5  26  0  ~/python-server/git.yml
+'6  26  22  ~/python-server/git.yml
+'7  25  3  ~/python-server/git.yml
+'8  3  2  ~/python-server/git.yml
+'9  23  11  ~/python-server/git.yml
 
 # Jumplist (newest first):
+-'  6  2  ~/python-server/run_server.yml
+-'  2  0  ~/python-server/run_server.yml
+-'  5  4  ~/python-server/run_server.yml
+-'  2  18  ~/python-server/git.yml
+-'  26  0  ~/python-server/git.yml
+-'  4  2  ~/python-server/run_server.yml
+-'  1  0  ~/python-server/run_server.yml
+-'  25  4  ~/python-server/git.yml
+-'  3  2  ~/python-server/git.yml
+-'  23  5  ~/python-server/git.yml
+-'  1  0  ~/python-server/git.yml
 -'  13  5  ~/python-server/user.yml
 -'  2  43  ~/python-server/vars.yml
 -'  1  3  ~/python-server/vars.yml
@@ -152,13 +163,67 @@
 -'  1  0  ~/nexus.yml
 -'  42  4  ~/nexus.yml
 -'  41  4  ~/nexus.yml
--'  61  2  ~/nexus.yml
--'  59  0  ~/nexus.yml
--'  58  0  ~/nexus.yml
--'  2  43  ~/python-server/vars.yml
--'  1  3  ~/python-server/vars.yml
 
 # History of marks within files (newest to oldest):
+
+> ~/python-server/run_server.yml
+	"	6	2
+	^	6	3
+	.	6	2
+	+	5	0
+	+	3	0
+	+	2	17
+	+	3	8
+	+	5	30
+	+	5	10
+	+	2	18
+	+	6	2
+
+> ~/python-server/git.yml
+	"	2	18
+	^	2	19
+	.	2	18
+	+	26	0
+	+	2	1
+	+	1	2
+	+	9	0
+	+	17	77
+	+	10	0
+	+	17	2
+	+	19	9
+	+	10	19
+	+	17	0
+	+	15	0
+	+	12	4
+	+	13	4
+	+	14	4
+	+	15	4
+	+	12	11
+	+	13	29
+	+	14	14
+	+	15	14
+	+	25	17
+	+	20	4
+	+	23	4
+	+	24	38
+	+	25	4
+	+	25	21
+	+	23	32
+	+	24	61
+	+	25	29
+	+	24	11
+	+	23	20
+	+	13	23
+	+	22	22
+	+	25	0
+	+	25	16
+	+	2	1
+	+	25	15
+	+	26	0
+	+	26	31
+	+	26	22
+	+	26	0
+	+	2	18
 
 > ~/python-server/user.yml
 	"	13	5
