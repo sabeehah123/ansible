@@ -1,0 +1,6 @@
+---
+- hosts: 10.154.0.3
+  tasks: 
+  - name: Run python-server
+    command: "/home/sabeehah1996/python-server/app.py"
+...
